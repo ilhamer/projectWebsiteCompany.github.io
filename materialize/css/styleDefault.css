@@ -1,0 +1,41 @@
+/* .sidenav-trigger{
+ float: right !important;
+} */
+
+
+
+.sidenav{
+    background-color: rgba(124,179,66,0.5);
+    /* opacity: 0.5 !important; */
+}
+.slider h3,
+.sider h5,
+.clients{
+    text-shadow: 3px 1px 3px rgba(0,0,0,0.5);
+}
+.parallax-container{
+    height: 20%;
+}
+.parallax img{
+    filter: grayscale(0.2);
+    opacity: 0.5 !important;
+}
+.clients img{
+max-width: 150px;
+filter: drop-shadow(1px 1px 1px rgba(0.0.0.0.8));
+}
+
+section{
+    padding: 14px 0
+}
+footer{
+    padding: 1px 0
+}
+
+
+
+
+
+
+
+
