@@ -55,13 +55,22 @@ const show = setInterval(function(){
 }
 
 })
+const dtogle = document.querySelector('#gost')
+const from = document.querySelector('.reset')
+dtogle.classList.remove('progress')
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyrWtzmY5_XxDefkr11jitpyQOyVfuu5SZ_cmU4sQVyab_cJUB_yCtZs1rqli0BC4go5w/exec'
 const form = document.forms['submit-to-google-sheet']
 
 form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => console.log('Success!', response))
+    e.preventDefault()
+    dtogle.classList.toggle('progress')
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        M.toast({html: 'berhasil terkirim !', classes: 'rounded'});
+        dtogle.classList.toggle('progress')
+        from.reset()
+
+        console.log('Success!', response)})
     .catch(error => console.error('Error!', error.message))
 })
